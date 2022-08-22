@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=M+PLUS+2&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Noto+Serif:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@300;400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0; 
+     padding: 0; 
+     font-family: 'Roboto',sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    top:0;
+    width: 100%;
+    height:60px ;
+    background-color: #fff;
+    box-shadow: 0 2px 2px  rgba(0,0,0,.2);
+}
+
+
+nav .logo img{
+    position: relative;
+    height: 45px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+nav ul{
+    display: flex;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+nav ul li{
+    padding-right:55px ;
+    font-size: 12px;
+    font-weight: 700;
+}
+nav ul li i{
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
+nav .login {
+    margin:10px 35px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    
+}
+nav .login a{
+    text-decoration: none;
+    list-style: none;
+    font-weight: 700;
+}
+
+header h1{
+    margin: 20px 20px;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150vh;
+     border-radius: 50px;
+    color:#fff;
+    cursor:pointer;
+    flex:0.5;
+    margin:10px;
+    position:relative;
+    transition: flex 0.7s ease-in;
+}
+ 
+ .panel h3{
+    font-size: 24px;
+    position: absolute;  
+     top: 20px;
+    left: 20px;
+    margin: 0;
+    opacity:0; 
+
+} 
+.panel.active{
+    flex:5;
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+@media(max-width: 480px){
+    
+    .container{
+        width:100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display:none;
+    }
+}
